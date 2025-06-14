@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Sohel Rana | Portfolio</title>
+  <style>
+    :root {
+      --bg-dark: #0d1117;
+      --bg-darker: #010409;
+      --text-light: #c9d1d9;
+      --text-bright: #ffffff;
+      --accent-green: #238636;
+      --accent-green-hover: #2ea043;
+      --border-subtle: #30363d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { background-color: var(--bg-dark); color: var(--text-light); font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--bg-darker); position: fixed; width: 100%; top: 0; z-index: 100; }
+    .nav-logo { font-weight: bold; font-size: 1.25rem; color: var(--text-bright); }
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-links a:hover { color: var(--accent-green); }
+    .btn-primary { background-color: var(--accent-green); color: var(--text-bright); padding: 0.5rem 1rem; border-radius: 0.375rem; transition: background 0.2s; }
+    .btn-primary:hover { background-color: var(--accent-green-hover); }
+    #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 1rem; margin-top: 4rem; }
+    #hero h1 { font-size: 3rem; color: var(--text-bright); animation: fadeIn 1s ease-in-out both; }
+    #hero p { margin-top: 1rem; font-size: 1.25rem; animation: fadeIn 1s ease-in-out 0.5s both; }
+    .hero-buttons { margin-top: 2rem; display: flex; gap: 1rem; animation: fadeIn 1s ease-in-out 1s both; }
+    section { padding: 4rem 2rem; }
+    .section-title { font-size: 2rem; color: var(--text-bright); margin-bottom: 2rem; text-align: center; }
+    .grid-3 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media(min-width: 768px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .card { background: var(--bg-darker); padding: 1.5rem; border: 1px solid var(--border-subtle); border-radius: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.5); }
+    .timeline { border-left: 2px solid var(--accent-green); margin-left: 1rem; padding-left: 2rem; position: relative; }
+    .timeline-event { margin-bottom: 2rem; position: relative; }
+    .timeline-event::before { content: ''; position: absolute; left: -1.25rem; top: 0.25rem; width: 1rem; height: 1rem; background: var(--accent-green); border-radius: 50%; border: 2px solid var(--bg-dark); }
+    footer { background: var(--bg-darker); padding: 2rem; text-align: center; font-size: 0.875rem; border-top: 1px solid var(--border-subtle); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">SohelRana</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#cv" class="btn-primary">CV</a>
+  </nav>
+  <section id="hero">
+    <h1>Hi, I'm Md. Sohel Rana</h1>
+    <p>Chemical Engineer &amp; Developer passionate about sustainable energy and tech.</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="https://linkedin.com/in/sohelrana1099" class="btn-primary" style="background:transparent; border:1px solid var(--accent-green);">LinkedIn</a>
+    </div>
+  </section>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="max-width:600px; margin:0 auto; text-align:center;">I'm a Chemical Engineer from BUET with a passion for renewable energy, computational modeling, and full-stack development. Currently working at Petromax LPG Limited, I aim to blend engineering and code to build impactful solutions.</p>
+  </section>
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Solar Dryer Simulation</h3>
+        <p>CFD simulation of natural convection solar dryer using OpenFOAM to optimize drying efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Condensate Fractionation Plant Design</h3>
+        <p>Complete design of distillation column for reformate and LPG production from naphtha.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Finance App</h3>
+        <p>Cross-platform app to track income, expenses, assets, and investments with data visualization.</p>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid-3">
+      <div class="card"><strong>Python &amp; MATLAB</strong><p>Data analysis, simulation, and automation.</p></div>
+      <div class="card"><strong>OpenFOAM &amp; Aspen HYSYS</strong><p>CFD and process simulation expertise.</p></div>
+      <div class="card"><strong>React &amp; Tailwind CSS</strong><p>Modern UI development and styling.</p></div>
+    </div>
+  </section>
+  <section id="timeline">
+    <h2 class="section-title">My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <h3>2023 – Present</h3>
+        <p>Working as Assistant Manager at Petromax LPG Limited (SHV Energy).</p>
+      </div>
+      <div class="timeline-event">
+        <h3>2023</h3>
+        <p>Graduated with Honors in Chemical Engineering from BUET (CGPA 3.79, 8th out of 60).</p>
+      </div>
+      <div class="timeline-event">
+        <h3>2021</h3>
+        <p>Presented research on thermochemical simulation tool at IC4ME2 Conference.</p>
+      </div>
+      <div class="timeline-event">
+        <h3>2017</h3>
+        <p>Started academic journey at BUET.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p style="text-align:center; margin-bottom:1rem;">Feel free to <a href="mailto:sohelrana.buet17@gmail.com" style="color: var(--accent-green);">email me</a> or connect on <a href="https://linkedin.com/in/sohelrana1099" style="color: var(--accent-green);">LinkedIn</a>.</p>
+  </section>
+  <footer>
+    &copy; 2025 Md. Sohel Rana. All rights reserved.
+  </footer>
+</body>
+</html>
